@@ -104,9 +104,9 @@ var config = {
         historyApiFallback: true,
         disableHostCheck  : true,
         host   : '0.0.0.0',
-        hot    : true,   // HMR模式
-        inline : true,   // 实时刷新
-        port   : 8089,   // 修改端口，一般默认是8080
+        hot    : true,
+        inline : true,
+        port   : 8089,
     },
 };
 
