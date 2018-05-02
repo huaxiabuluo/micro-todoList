@@ -4,6 +4,7 @@ var HtmlWebpackPlugin  = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin  = require("extract-text-webpack-plugin");
 var UglifyJsPlugin     = webpack.optimize.UglifyJsPlugin;
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var config = {
     entry: {
@@ -96,6 +97,7 @@ var config = {
             filename: `index.html`,
             template:'./template.html'
         }),
+        // new BundleAnalyzerPlugin(),
     ],
     devServer: {
         contentBase: path.resolve(__dirname, './html'),

@@ -11,14 +11,4 @@ const TodoContext = React.createContext({
 export const Provider = TodoContext.Provider;
 export const Consumer = TodoContext.Consumer;
 
-export const connect = mapStateToProps => Component => class extends React.Component {
-    shouldComponentUpdate() {
-        return false;
-    }
-
-    render() {
-        return (
-            <Consumer>{state => <Component {...mapStateToProps(state)} />}</Consumer>
-        );
-    }
-}
+export const connect = mapStateToProps => Component => () => <Consumer>{state => <Component {...mapStateToProps(state)} />}</Consumer>
